@@ -65,7 +65,7 @@ body { max-width: 1180px; margin: 0 auto; padding: 32px 20px 60px; line-height: 
 .type-tabs::-webkit-scrollbar { display: none; }
 .type-tab { padding: 6px 14px; border-radius: 7px; cursor: pointer; font-size: 0.8rem; font-weight: 600; color: var(--text-muted); border: none; background: none; font-family: var(--font); transition: all 200ms cubic-bezier(0.32,0.72,0,1); white-space: nowrap; }
 .type-tab:hover { color: var(--text); }
-.type-tab.active { background: var(--bg); color: var(--text); box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
+.type-tab.active { background: var(--text); color: var(--bg); box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
 .type-tab .count { font-size: 0.66rem; opacity: 0.5; margin-left: 3px; font-weight: 400; }
 .type-panel { display: none; }
 .type-panel.active { display: block; }
@@ -106,17 +106,31 @@ def term_cell(label, room):
     return f'<td><span class="price">${price:,}</span></td>'
 
 
-def render_room_table(rooms):
+# 公寓 → 官网页面（房间链接目标）
+PROP_PAGES = {
+    "On Gibbons": "https://www.accolade-student.com/en/locations/sydney/on-gibbons",
+    "On Regent": "https://www.accolade-student.com/en/locations/sydney/on-regent",
+}
+
+
+def render_room_table(rooms, prop_name=""):
     rows = ""
+    prop_url = PROP_PAGES.get(prop_name, "")
     for r in rooms:
         ok = r.get("has_price")
         cls = "ok" if ok else "bad"
         label = "可订" if ok else "售罄"
         floor = esc(f"{r.get('floor')}层") if r.get("floor") else "—"
         terms = "".join(term_cell(t, r) for t in TERM_LABELS)
+        # 房间号超链接（带 ↗ 提示，新窗口打开）
+        room_html = (f'<a href="{prop_url}" target="_blank" '
+                     f'style="color:inherit;text-decoration:none;" class="room-link">'
+                     f'<span class="room-no">{esc(r["room"])}</span> '
+                     f'<span style="font-size:0.7rem;opacity:0.45;">↗</span></a>'
+                     if prop_url else f'<span class="room-no">{esc(r["room"])}</span>')
         rows += (
             f'<tr class="row-{cls}">'
-            f'<td><span class="room-no">{esc(r["room"])}</span></td>'
+            f'<td>{room_html}</td>'
             f'<td>{floor}</td>'
             f'{terms}'
             f'<td><span class="tag tag-{cls}">{label}</span></td>'
@@ -157,7 +171,7 @@ def render_type_tabs(pi, group, types, offset):
     return f'<div class="type-tabs">{tabs}</div>{panels}'
 
 
-def render_property(pi, rooms):
+def render_property(pi, prop_name, rooms):
     """公寓内：分组 Tab（Studio/合租）→ 组内户型 Tab → 房间表格"""
     by_type = {}
     for r in rooms:
@@ -194,7 +208,7 @@ def render_property(pi, rooms):
                           f'onclick="switchType({pi},{gi},{ti})">{esc(ft)}'
                           f'<span class="count">{avail}/{len(rs)}</span></button>')
             type_panels += (f'<div class="type-panel{tact}" id="type-panel-{pi}-{gi}-{ti}">'
-                            f'{render_room_table(rs)}</div>')
+                            f'{render_room_table(rs, prop_name)}</div>')
 
         group_panels += (f'<div class="group-panel{gact}" id="group-panel-{pi}-{gi}">'
                          f'<div class="type-tabs">{type_tabs}</div>{type_panels}</div>')
@@ -221,7 +235,7 @@ def main():
         avail = sum(1 for r in rooms if r["has_price"])
         prop_nav += (f'<button class="prop-btn{pact}" id="btn-p0-{pi}" onclick="switchProp({pi})">'
                      f'{esc(pname)}<span class="count">{avail}/{total}</span></button>')
-        panels += f'<div class="prop-panel{pact}" id="panel-p0-{pi}">{render_property(pi, rooms)}</div>'
+        panels += f'<div class="prop-panel{pact}" id="panel-p0-{pi}">{render_property(pi, pname, rooms)}</div>'
 
     city_groups = (f'<div class="city-group active" id="group-city-0">'
                    f'<nav class="prop-nav fade-in">{prop_nav}</nav>{panels}</div>')
