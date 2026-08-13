@@ -110,6 +110,10 @@ def term_cell(label, room):
 PROP_PAGES = {
     "On Gibbons": "https://www.accolade-student.com/en/locations/sydney/on-gibbons",
     "On Regent": "https://www.accolade-student.com/en/locations/sydney/on-regent",
+    "On A'Beckett": "https://www.accolade-student.com/en/locations/melbourne/on-abeckett",
+    "On Gray": "https://www.accolade-student.com/en/locations/adelaide/on-gray",
+    "On Waymouth": "https://www.accolade-student.com/en/locations/adelaide/on-waymouth",
+    "On Moore": "https://www.accolade-student.com/en/locations/canberra/on-moore",
 }
 
 
@@ -171,7 +175,7 @@ def render_type_tabs(pi, group, types, offset):
     return f'<div class="type-tabs">{tabs}</div>{panels}'
 
 
-def render_property(pi, prop_name, rooms):
+def render_property(ci, pi, prop_name, rooms):
     """公寓内：分组 Tab（Studio/合租）→ 组内户型 Tab → 房间表格"""
     by_type = {}
     for r in rooms:
@@ -194,8 +198,8 @@ def render_property(pi, prop_name, rooms):
     for gi, (gkey, glabel, gtypes) in enumerate(groups):
         gact = " active" if gi == 0 else ""
         total = sum(len(v) for v in gtypes.values())
-        group_tabs += (f'<button class="group-tab{gact}" id="group-btn-{pi}-{gi}" '
-                       f'onclick="switchGroup({pi},{gi})">{glabel}<span class="count">{total}间</span></button>')
+        group_tabs += (f'<button class="group-tab{gact}" id="group-btn-{ci}-{pi}-{gi}" '
+                       f'onclick="switchGroup({ci},{pi},{gi})">{glabel}<span class="count">{total}间</span></button>')
 
         # 组内户型 Tab
         type_tabs = ""
@@ -204,41 +208,62 @@ def render_property(pi, prop_name, rooms):
             rs = gtypes[ft]
             avail = sum(1 for r in rs if r["has_price"])
             tact = " active" if ti == 0 else ""
-            type_tabs += (f'<button class="type-tab{tact}" id="type-btn-{pi}-{gi}-{ti}" '
-                          f'onclick="switchType({pi},{gi},{ti})">{esc(ft)}'
+            type_tabs += (f'<button class="type-tab{tact}" id="type-btn-{ci}-{pi}-{gi}-{ti}" '
+                          f'onclick="switchType({ci},{pi},{gi},{ti})">{esc(ft)}'
                           f'<span class="count">{avail}/{len(rs)}</span></button>')
-            type_panels += (f'<div class="type-panel{tact}" id="type-panel-{pi}-{gi}-{ti}">'
+            type_panels += (f'<div class="type-panel{tact}" id="type-panel-{ci}-{pi}-{gi}-{ti}">'
                             f'{render_room_table(rs, prop_name)}</div>')
 
-        group_panels += (f'<div class="group-panel{gact}" id="group-panel-{pi}-{gi}">'
+        group_panels += (f'<div class="group-panel{gact}" id="group-panel-{ci}-{pi}-{gi}">'
                          f'<div class="type-tabs">{type_tabs}</div>{type_panels}</div>')
 
     return f'<div class="group-tabs">{group_tabs}</div>{group_panels}'
 
 
+CITY_MAP = {
+    "On Gibbons": "悉尼 Sydney", "On Regent": "悉尼 Sydney",
+    "On A'Beckett": "墨尔本 Melbourne",
+    "On Gray": "阿德莱德 Adelaide", "On Waymouth": "阿德莱德 Adelaide",
+    "On Moore": "堪培拉 Canberra",
+}
+
+
 def main():
-    with open("accolade_rooms.json", encoding="utf-8") as f:
-        data = json.load(f)
+    # 优先用 Sitecore 全城市数据，回退 3destate 数据
+    try:
+        with open("accolade_sitecore.json", encoding="utf-8") as f:
+            data = json.load(f)
+    except (FileNotFoundError, json.JSONDecodeError):
+        with open("accolade_rooms.json", encoding="utf-8") as f:
+            data = json.load(f)
     fetched = data.get("fetched_at", "")
     properties = data.get("properties", {})
 
-    city_nav = city_groups = ""
-    # 目前只有悉尼
-    props = list(properties.keys())
-    city_nav = ('<button class="city-btn active" id="btn-city-0" onclick="switchCity(0)">'
-                '悉尼 Sydney<span class="count">2</span></button>')
+    # 按城市分组
+    cities = {}
+    for pname in properties.keys():
+        city = CITY_MAP.get(pname, "悉尼 Sydney")
+        cities.setdefault(city, []).append(pname)
 
-    prop_nav = panels = ""
-    for pi, (pname, rooms) in enumerate(properties.items()):
-        pact = " active" if pi == 0 else ""
-        total = len(rooms)
-        avail = sum(1 for r in rooms if r["has_price"])
-        prop_nav += (f'<button class="prop-btn{pact}" id="btn-p0-{pi}" onclick="switchProp({pi})">'
-                     f'{esc(pname)}<span class="count">{avail}/{total}</span></button>')
-        panels += f'<div class="prop-panel{pact}" id="panel-p0-{pi}">{render_property(pi, pname, rooms)}</div>'
+    city_nav = ""
+    city_groups = ""
+    for ci, (city, prop_list) in enumerate(cities.items()):
+        active = " active" if ci == 0 else ""
+        city_nav += (f'<button class="city-btn{active}" id="btn-city-{ci}" onclick="switchCity({ci})">'
+                     f'{esc(city)}<span class="count">{len(prop_list)}</span></button>')
 
-    city_groups = (f'<div class="city-group active" id="group-city-0">'
-                   f'<nav class="prop-nav fade-in">{prop_nav}</nav>{panels}</div>')
+        prop_nav = panels = ""
+        for pi, pname in enumerate(prop_list):
+            rooms = properties.get(pname, [])
+            pact = " active" if pi == 0 else ""
+            total = len(rooms)
+            avail = sum(1 for r in rooms if r.get("has_price"))
+            prop_nav += (f'<button class="prop-btn{pact}" id="btn-p{ci}-{pi}" onclick="switchProp({ci},{pi})">'
+                         f'{esc(pname)}<span class="count">{avail}/{total}</span></button>')
+            panels += (f'<div class="prop-panel{pact}" id="panel-p{ci}-{pi}">'
+                       f'{render_property(ci, pi, pname, rooms)}</div>')
+        city_groups += (f'<div class="city-group{active}" id="group-city-{ci}">'
+                        f'<nav class="prop-nav fade-in">{prop_nav}</nav>{panels}</div>')
 
     html = f"""<!DOCTYPE html>
 <html lang="zh-CN">
@@ -252,7 +277,7 @@ def main():
 <body>
 <div class="header fade-in">
   <div class="header-top"><h1>Accolade 房态查房</h1></div>
-  <p class="meta">📍 悉尼 · 房间级实时房态 &ensp;|&ensp; 更新于 {fetched} &ensp;|&ensp; 优惠信息请查看「供应商信息同步群」</p>
+  <p class="meta">📍 悉尼 · 墨尔本 · 阿德莱德 · 堪培拉 &ensp;|&ensp; 更新于 {fetched} &ensp;|&ensp; 优惠信息请查看「供应商信息同步群」</p>
   <p class="meta" style="margin-top:4px;">⚠️ 此页面仅供一键查房参考，实际信息以官网显示为准</p>
 </div>
 <nav class="city-nav fade-in">{city_nav}</nav>
@@ -266,7 +291,7 @@ def main():
     <div class="footer-card">
       <h3>注意事项</h3>
       <ul>
-        <li>房间号来自官网 3D 房态系统</li>
+        <li>房间号来自官网房态系统</li>
         <li>价格按周计算（AUD）</li>
         <li>可订状态实时变化，以官网为准</li>
       </ul>
@@ -274,7 +299,7 @@ def main():
     <div class="footer-card">
       <h3>数据来源</h3>
       <ul>
-        <li>accolade-student.com 3D 房态系统</li>
+        <li>accolade-student.com 房态系统</li>
         <li>GitHub Actions 自动抓取</li>
       </ul>
     </div>
@@ -286,17 +311,18 @@ function switchCity(ci){{
   document.querySelectorAll('.city-btn').forEach((b,i)=>b.classList.toggle('active',i===ci));
   document.querySelectorAll('.city-group').forEach((g,i)=>g.classList.toggle('active',i===ci));
 }}
-function switchProp(pi){{
-  document.querySelectorAll('.prop-btn').forEach((b,i)=>b.classList.toggle('active',i===pi));
-  document.querySelectorAll('.prop-panel').forEach((p,i)=>p.classList.toggle('active',i===pi));
+function switchProp(ci,pi){{
+  var g=document.getElementById('group-city-'+ci);
+  g.querySelectorAll('.prop-btn').forEach((b,i)=>b.classList.toggle('active',i===pi));
+  g.querySelectorAll('.prop-panel').forEach((p,i)=>p.classList.toggle('active',i===pi));
 }}
-function switchGroup(pi,gi){{
-  var panel=document.getElementById('panel-p0-'+pi);
+function switchGroup(ci,pi,gi){{
+  var panel=document.getElementById('panel-p'+ci+'-'+pi);
   panel.querySelectorAll('.group-tab').forEach((b,i)=>b.classList.toggle('active',i===gi));
   panel.querySelectorAll('.group-panel').forEach((p,i)=>p.classList.toggle('active',i===gi));
 }}
-function switchType(pi,gi,ti){{
-  var gp=document.getElementById('group-panel-'+pi+'-'+gi);
+function switchType(ci,pi,gi,ti){{
+  var gp=document.getElementById('group-panel-'+ci+'-'+pi+'-'+gi);
   gp.querySelectorAll('.type-tab').forEach((b,i)=>b.classList.toggle('active',i===ti));
   gp.querySelectorAll('.type-panel').forEach((p,i)=>p.classList.toggle('active',i===ti));
 }}
@@ -307,7 +333,3 @@ function switchType(pi,gi,ti){{
     with open("rooms.html", "w", encoding="utf-8") as f:
         f.write(html)
     print(f"✅ 已生成 rooms.html（更新于 {fetched}）")
-
-
-if __name__ == "__main__":
-    main()

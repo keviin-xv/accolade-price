@@ -220,12 +220,11 @@ def main():
         print("🎉 房间级更新完成")
         return
 
-    # 完整流程：双数据源
-    rooms_ok = run_rooms()
-    plans_ok = run_floorplans()
-    if rooms_ok:
-        import render_rooms
-        render_rooms.main()
+    # 完整流程：Sitecore GraphQL 房间级（全城市）
+    import fetch_sitecore
+    fetch_sitecore.main()
+    import render_rooms
+    render_rooms.main()
     print("🎉 流水线完成")
 
 
