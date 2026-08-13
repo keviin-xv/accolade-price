@@ -1,0 +1,663 @@
+{
+  "fetched_at": "2026-08-13 13:36:24",
+  "properties": {
+    "On Gibbons": [
+      {
+        "room": "02.02",
+        "floorplan": "Cluster Ensuite Twin Share Bronze",
+        "floor": 2,
+        "terms": {
+          "全年": 569,
+          "学期": 589,
+          "短学期": 619
+        },
+        "available_date": "2026-07-01",
+        "has_price": true
+      },
+      {
+        "room": "02.03",
+        "floorplan": "Cluster Ensuite Silver",
+        "floor": 2,
+        "terms": {
+          "全年": 749,
+          "学期": 769,
+          "短学期": 799
+        },
+        "available_date": "2026-07-01",
+        "has_price": true
+      },
+      {
+        "room": "02.04",
+        "floorplan": "Cluster Ensuite Silver",
+        "floor": 2,
+        "terms": {
+          "全年": 749,
+          "学期": 769,
+          "短学期": 799
+        },
+        "available_date": "2026-07-01",
+        "has_price": true
+      },
+      {
+        "room": "02.05",
+        "floorplan": "Cluster Ensuite Twin Bronze",
+        "floor": 2,
+        "terms": {
+          "全年": 749,
+          "学期": 769,
+          "短学期": 619
+        },
+        "available_date": "2026-07-01",
+        "has_price": true
+      },
+      {
+        "room": "02.06",
+        "floorplan": "Cluster Ensuite Silver",
+        "floor": 2,
+        "terms": {
+          "全年": 749,
+          "学期": 769,
+          "短学期": 799
+        },
+        "available_date": "2026-07-01",
+        "has_price": true
+      },
+      {
+        "room": "02.08",
+        "floorplan": "Cluster Ensuite Silver",
+        "floor": 2,
+        "terms": {
+          "全年": 749,
+          "学期": 769,
+          "短学期": 799
+        },
+        "available_date": "2026-07-01",
+        "has_price": true
+      },
+      {
+        "room": "02.09",
+        "floorplan": "Cluster Ensuite Silver",
+        "floor": 2,
+        "terms": {
+          "全年": 749,
+          "学期": 769,
+          "短学期": 799
+        },
+        "available_date": "2026-07-01",
+        "has_price": true
+      },
+      {
+        "room": "02.10",
+        "floorplan": "Cluster Ensuite Silver",
+        "floor": 2,
+        "terms": {
+          "全年": 749,
+          "学期": 769,
+          "短学期": 799
+        },
+        "available_date": "2026-07-01",
+        "has_price": true
+      },
+      {
+        "room": "02.12",
+        "floorplan": "Cluster Ensuite Silver",
+        "floor": 2,
+        "terms": {
+          "全年": 749,
+          "学期": 769,
+          "短学期": 799
+        },
+        "available_date": "2026-07-01",
+        "has_price": true
+      },
+      {
+        "room": "02.13",
+        "floorplan": "Cluster Ensuite Silver",
+        "floor": 2,
+        "terms": {
+          "全年": 769,
+          "学期": 799
+        },
+        "available_date": "2026-07-27",
+        "has_price": true
+      },
+      {
+        "room": "02.14",
+        "floorplan": "Twin Studio Silver",
+        "floor": 2,
+        "terms": {
+          "全年": 649,
+          "学期": 669,
+          "短学期": 699
+        },
+        "available_date": "2026-07-01",
+        "has_price": true
+      },
+      {
+        "room": "02.15",
+        "floorplan": "Twin Studio Bronze",
+        "floor": 2,
+        "terms": {
+          "全年": 499,
+          "学期": 519,
+          "短学期": 549
+        },
+        "available_date": "2026-07-01",
+        "has_price": true
+      },
+      {
+        "room": "02.20",
+        "floorplan": "Cluster Ensuite Silver",
+        "floor": 2,
+        "terms": {
+          "全年": 749,
+          "学期": 769,
+          "短学期": 799
+        },
+        "available_date": "2026-07-01",
+        "has_price": true
+      },
+      {
+        "room": "02.23",
+        "floorplan": "Cluster Ensuite Silver",
+        "floor": 2,
+        "terms": {
+          "全年": 749,
+          "学期": 769,
+          "短学期": 799
+        },
+        "available_date": "2026-07-10",
+        "has_price": true
+      },
+      {
+        "room": "02.27",
+        "floorplan": "Twin Studio Bronze",
+        "floor": 2,
+        "terms": {
+          "全年": 499,
+          "学期": 519,
+          "短学期": 549
+        },
+        "available_date": "2026-07-01",
+        "has_price": true
+      },
+      {
+        "room": "03.01",
+        "floorplan": "Twin Studio Silver",
+        "floor": 3,
+        "terms": {
+          "全年": 649,
+          "学期": 669,
+          "短学期": 699
+        },
+        "available_date": "2026-07-01",
+        "has_price": true
+      },
+      {
+        "room": "03.02",
+        "floorplan": "Cluster Ensuite Twin Share Bronze",
+        "floor": 3,
+        "terms": {
+          "全年": 569,
+          "学期": 589,
+          "短学期": 619
+        },
+        "available_date": "2026-07-01",
+        "has_price": true
+      },
+      {
+        "room": "03.03",
+        "floorplan": "Cluster Ensuite Twin Share Bronze",
+        "floor": 3,
+        "terms": {
+          "全年": 569,
+          "学期": 589,
+          "短学期": 619
+        },
+        "available_date": "2026-07-27",
+        "has_price": true
+      },
+      {
+        "room": "03.05",
+        "floorplan": "Cluster Ensuite Twin Share Bronze",
+        "floor": 3,
+        "terms": {
+          "全年": 569,
+          "学期": 589,
+          "短学期": 619
+        },
+        "available_date": "2026-08-07",
+        "has_price": true
+      },
+      {
+        "room": "03.20",
+        "floorplan": "Cluster Ensuite Silver",
+        "floor": 3,
+        "terms": {
+          "全年": 749,
+          "学期": 769,
+          "短学期": 799
+        },
+        "available_date": "2026-07-27",
+        "has_price": true
+      },
+      {
+        "room": "03.22",
+        "floorplan": "Cluster Ensuite Silver",
+        "floor": 3,
+        "terms": {
+          "全年": 749,
+          "学期": 769,
+          "短学期": 799
+        },
+        "available_date": "2026-07-01",
+        "has_price": true
+      },
+      {
+        "room": "03.23",
+        "floorplan": "Cluster Ensuite Silver",
+        "floor": 3,
+        "terms": {
+          "全年": 749,
+          "学期": 769,
+          "短学期": 799
+        },
+        "available_date": "2026-08-07",
+        "has_price": true
+      },
+      {
+        "room": "03.27",
+        "floorplan": "Twin Studio Bronze",
+        "floor": 3,
+        "terms": {
+          "全年": 499,
+          "学期": 519,
+          "短学期": 549
+        },
+        "available_date": "2026-07-01",
+        "has_price": true
+      },
+      {
+        "room": "04.08",
+        "floorplan": "Cluster Ensuite Silver",
+        "floor": 4,
+        "terms": {
+          "全年": 749,
+          "学期": 769,
+          "短学期": 799
+        },
+        "available_date": "2026-07-27",
+        "has_price": true
+      },
+      {
+        "room": "04.12",
+        "floorplan": "Cluster Ensuite Silver",
+        "floor": 4,
+        "terms": {
+          "全年": 749,
+          "学期": 769,
+          "短学期": 799
+        },
+        "available_date": "2026-08-10",
+        "has_price": true
+      },
+      {
+        "room": "04.13",
+        "floorplan": "Private Studio Gold",
+        "floor": 4,
+        "terms": {
+          "全年": 849,
+          "学期": 869,
+          "短学期": 899
+        },
+        "available_date": "2026-07-27",
+        "has_price": true
+      },
+      {
+        "room": "05.01",
+        "floorplan": "Private Studio Gold",
+        "floor": 5,
+        "terms": {
+          "全年": 849,
+          "学期": 869,
+          "短学期": 899
+        },
+        "available_date": "2026-07-01",
+        "has_price": true
+      },
+      {
+        "room": "05.13",
+        "floorplan": "Private Studio Gold",
+        "floor": 5,
+        "terms": {
+          "全年": 849,
+          "学期": 869,
+          "短学期": 899
+        },
+        "available_date": "2026-07-01",
+        "has_price": true
+      },
+      {
+        "room": "06.01",
+        "floorplan": "Private Studio Gold",
+        "floor": 6,
+        "terms": {
+          "全年": 849,
+          "学期": 869,
+          "短学期": 899
+        },
+        "available_date": "2026-07-01",
+        "has_price": true
+      },
+      {
+        "room": "08.13",
+        "floorplan": "Twin Studio Bronze",
+        "floor": 8,
+        "terms": {
+          "全年": 549,
+          "学期": 569,
+          "短学期": 599
+        },
+        "available_date": "2026-07-01",
+        "has_price": true
+      },
+      {
+        "room": "10.13",
+        "floorplan": "Twin Studio Bronze",
+        "floor": 10,
+        "terms": {
+          "全年": 549,
+          "学期": 569,
+          "短学期": 599
+        },
+        "available_date": "2026-07-01",
+        "has_price": true
+      },
+      {
+        "room": "14.08",
+        "floorplan": "Private Studio Silver",
+        "floor": 14,
+        "terms": {
+          "全年": 795,
+          "学期": 815,
+          "短学期": 835
+        },
+        "available_date": "2026-07-01",
+        "has_price": true
+      },
+      {
+        "room": "15.06",
+        "floorplan": "Private Studio Silver",
+        "floor": 15,
+        "terms": {
+          "全年": 815,
+          "学期": 835
+        },
+        "available_date": "2026-07-08",
+        "has_price": true
+      },
+      {
+        "room": "15.13",
+        "floorplan": "Private Studio Silver",
+        "floor": 15,
+        "terms": {
+          "全年": 795,
+          "学期": 815,
+          "短学期": 835
+        },
+        "available_date": "2026-07-01",
+        "has_price": true
+      },
+      {
+        "room": "16.13",
+        "floorplan": "Twin Studio Bronze",
+        "floor": 16,
+        "terms": {
+          "全年": 795,
+          "学期": 815,
+          "短学期": 835
+        },
+        "available_date": "2026-07-09",
+        "has_price": true
+      },
+      {
+        "room": "17.13",
+        "floorplan": "Twin Studio Bronze",
+        "floor": 17,
+        "terms": {
+          "全年": 599,
+          "学期": 619,
+          "短学期": 649
+        },
+        "available_date": "2026-07-24",
+        "has_price": true
+      }
+    ],
+    "On Regent": [
+      {
+        "room": "02.12",
+        "floorplan": "Cluster Ensuite Silver",
+        "floor": 2,
+        "terms": {
+          "全年": 769,
+          "学期": 799
+        },
+        "available_date": "2026-07-09",
+        "has_price": true
+      },
+      {
+        "room": "02.17",
+        "floorplan": "Cluster Ensuite Silver",
+        "floor": 2,
+        "terms": {
+          "全年": 769,
+          "学期": 799
+        },
+        "available_date": "2026-07-01",
+        "has_price": true
+      },
+      {
+        "room": "03.23",
+        "floorplan": "Twin Studio Bronze",
+        "floor": 3,
+        "terms": {
+          "全年": 499,
+          "学期": 519,
+          "短学期": 549
+        },
+        "available_date": "2026-07-01",
+        "has_price": true
+      },
+      {
+        "room": "04.23",
+        "floorplan": "Twin Studio Bronze",
+        "floor": 4,
+        "terms": {
+          "全年": 499,
+          "学期": 519,
+          "短学期": 549
+        },
+        "available_date": "2026-07-01",
+        "has_price": true
+      },
+      {
+        "room": "06.13",
+        "floorplan": "Twin Studio Bronze",
+        "floor": 6,
+        "terms": {
+          "全年": 519,
+          "学期": 549
+        },
+        "available_date": "2026-07-01",
+        "has_price": true
+      },
+      {
+        "room": "06.23",
+        "floorplan": "Twin Studio Bronze",
+        "floor": 6,
+        "terms": {
+          "全年": 549
+        },
+        "available_date": "2026-07-01",
+        "has_price": true
+      },
+      {
+        "room": "07.13",
+        "floorplan": "Twin Studio Bronze",
+        "floor": 7,
+        "terms": {
+          "全年": 549,
+          "学期": 569,
+          "短学期": 599
+        },
+        "available_date": "2026-07-01",
+        "has_price": true
+      },
+      {
+        "room": "08.13",
+        "floorplan": "Twin Studio Bronze",
+        "floor": 8,
+        "terms": {
+          "全年": 549,
+          "学期": 569,
+          "短学期": 599
+        },
+        "available_date": "2026-07-01",
+        "has_price": true
+      },
+      {
+        "room": "09.13",
+        "floorplan": "Twin Studio Bronze",
+        "floor": 9,
+        "terms": {
+          "全年": 549,
+          "学期": 569,
+          "短学期": 599
+        },
+        "available_date": "2026-07-01",
+        "has_price": true
+      },
+      {
+        "room": "09.21",
+        "floorplan": "Twin Studio Bronze",
+        "floor": 9,
+        "terms": {
+          "全年": 799,
+          "学期": 799
+        },
+        "available_date": "2026-07-01",
+        "has_price": true
+      },
+      {
+        "room": "10.23",
+        "floorplan": "Twin Studio Bronze",
+        "floor": 10,
+        "terms": {
+          "全年": 599
+        },
+        "available_date": "2026-07-01",
+        "has_price": true
+      },
+      {
+        "room": "12.13",
+        "floorplan": "Twin Studio Bronze",
+        "floor": 12,
+        "terms": {
+          "全年": 619,
+          "学期": 599
+        },
+        "available_date": "2026-07-24",
+        "has_price": true
+      },
+      {
+        "room": "12.23",
+        "floorplan": "Twin Studio Bronze",
+        "floor": 12,
+        "terms": {
+          "全年": 549,
+          "学期": 619,
+          "短学期": 599
+        },
+        "available_date": "2026-07-01",
+        "has_price": true
+      },
+      {
+        "room": "13.01",
+        "floorplan": "Private Studio Silver",
+        "floor": 13,
+        "terms": {
+          "全年": 815,
+          "学期": 835
+        },
+        "available_date": "2026-07-08",
+        "has_price": true
+      },
+      {
+        "room": "14.01",
+        "floorplan": "Private Studio Silver",
+        "floor": 14,
+        "terms": {
+          "全年": 835
+        },
+        "available_date": "2026-07-01",
+        "has_price": true
+      },
+      {
+        "room": "14.05",
+        "floorplan": "Private Studio Silver",
+        "floor": 14,
+        "terms": {
+          "全年": 815,
+          "学期": 835
+        },
+        "available_date": "2026-07-01",
+        "has_price": true
+      },
+      {
+        "room": "14.22",
+        "floorplan": "Private Studio Silver",
+        "floor": 14,
+        "terms": {
+          "全年": 815,
+          "学期": 835
+        },
+        "available_date": "2026-07-01",
+        "has_price": true
+      },
+      {
+        "room": "15.13",
+        "floorplan": "Twin Studio Bronze",
+        "floor": 15,
+        "terms": {
+          "全年": 599,
+          "学期": 619,
+          "短学期": 649
+        },
+        "available_date": "2026-07-01",
+        "has_price": true
+      },
+      {
+        "room": "17.13",
+        "floorplan": "Twin Studio Bronze",
+        "floor": 17,
+        "terms": {
+          "全年": 649
+        },
+        "available_date": "2026-07-01",
+        "has_price": true
+      },
+      {
+        "room": "17.23",
+        "floorplan": "Private Studio Gold",
+        "floor": 17,
+        "terms": {
+          "全年": 849,
+          "学期": 869,
+          "短学期": 899
+        },
+        "available_date": "2026-07-25",
+        "has_price": true
+      }
+    ]
+  }
+}

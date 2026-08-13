@@ -1,0 +1,158 @@
+{
+  "fetched_at": "2026-08-13 13:36:27",
+  "properties": {
+    "On Gibbons": [
+      {
+        "floorplan": "Private Studio Bronze",
+        "terms": {
+          "全年": 0,
+          "学期": 0,
+          "短学期": 0
+        },
+        "available_date": "7/24/2026 12:00:00 AM",
+        "has_price": false
+      },
+      {
+        "floorplan": "Private Studio Silver",
+        "terms": {
+          "全年": 795,
+          "学期": 815,
+          "短学期": 835
+        },
+        "available_date": "7/1/2026 12:00:00 AM",
+        "has_price": true
+      },
+      {
+        "floorplan": "Cluster Ensuite Twin Bronze",
+        "terms": {
+          "全年": 749,
+          "学期": 769,
+          "短学期": 619
+        },
+        "available_date": "7/1/2026 12:00:00 AM",
+        "has_price": true
+      },
+      {
+        "floorplan": "Private Studio Gold",
+        "terms": {
+          "全年": 849,
+          "学期": 869,
+          "短学期": 899
+        },
+        "available_date": "7/1/2026 12:00:00 AM",
+        "has_price": true
+      },
+      {
+        "floorplan": "Cluster Ensuite Silver",
+        "terms": {
+          "全年": 749,
+          "学期": 769,
+          "短学期": 799
+        },
+        "available_date": "7/1/2026 12:00:00 AM",
+        "has_price": true
+      },
+      {
+        "floorplan": "Cluster Ensuite Twin Share Bronze",
+        "terms": {
+          "全年": 569,
+          "学期": 589,
+          "短学期": 619
+        },
+        "available_date": "7/1/2026 12:00:00 AM",
+        "has_price": true
+      },
+      {
+        "floorplan": "Twin Studio Bronze",
+        "terms": {
+          "全年": 499,
+          "学期": 519,
+          "短学期": 549
+        },
+        "available_date": "7/1/2026 12:00:00 AM",
+        "has_price": true
+      },
+      {
+        "floorplan": "Twin Studio Silver",
+        "terms": {
+          "全年": 649,
+          "学期": 669,
+          "短学期": 699
+        },
+        "available_date": "7/1/2026 12:00:00 AM",
+        "has_price": true
+      },
+      {
+        "floorplan": "2 Bed Apartment Silver",
+        "terms": {
+          "全年": 0,
+          "学期": 0,
+          "短学期": 0
+        },
+        "available_date": "",
+        "has_price": false
+      }
+    ],
+    "On Regent": [
+      {
+        "floorplan": "Private Studio Silver",
+        "terms": {
+          "全年": 0,
+          "学期": 759,
+          "短学期": 779
+        },
+        "available_date": "7/1/2026 12:00:00 AM",
+        "has_price": true
+      },
+      {
+        "floorplan": "Manual Private Studio Gold",
+        "terms": {
+          "全年": 0,
+          "学期": 0,
+          "短学期": 0
+        },
+        "available_date": "7/25/2026 12:00:00 AM",
+        "has_price": false
+      },
+      {
+        "floorplan": "Private Studio Gold",
+        "terms": {
+          "全年": 849,
+          "学期": 869,
+          "短学期": 899
+        },
+        "available_date": "7/25/2026 12:00:00 AM",
+        "has_price": true
+      },
+      {
+        "floorplan": "2 Bed Apartment Silver",
+        "terms": {
+          "全年": 0,
+          "学期": 0,
+          "短学期": 0
+        },
+        "available_date": "7/1/2026 12:00:00 AM",
+        "has_price": false
+      },
+      {
+        "floorplan": "Cluster Ensuite Silver",
+        "terms": {
+          "全年": 769,
+          "学期": 799
+        },
+        "available_date": "7/1/2026 12:00:00 AM",
+        "has_price": true
+      },
+      {
+        "floorplan": "Twin Studio Bronze",
+        "terms": {
+          "全年": 499,
+          "学期": 519,
+          "短学期": 549
+        },
+        "available_date": "7/1/2026 12:00:00 AM",
+        "has_price": true
+      }
+    ]
+  }
+}
