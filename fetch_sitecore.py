@@ -184,6 +184,9 @@ def fetch_property(pname, page_url):
                 "has_price": any(v > 0 for v in terms.values()),
             })
         time.sleep(0.4)
+
+    # 楼层从高到低排序（同一楼层按房间号）
+    all_rooms.sort(key=lambda r: (int(r["floor"] or 0), r["room"]), reverse=True)
     return all_rooms
 
 
