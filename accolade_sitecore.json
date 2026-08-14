@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-13 08:09:37",
+  "fetched_at": "2026-08-14 02:18:28",
   "properties": {
     "On Gibbons": [
       {
@@ -707,45 +707,11 @@
         "has_price": true
       },
       {
-        "room": "07.02",
-        "floorplan": "Private Studio Silver",
-        "floor": "7",
-        "terms": {
-          "全年": 759,
-          "学期": 779,
-          "短学期": 799
-        },
-        "available_date": "2026-07-30",
-        "has_price": true
-      },
-      {
         "room": "06.23.2",
         "floorplan": "Twin Studio Bronze",
         "floor": "6",
         "terms": {
           "全年": 549
-        },
-        "available_date": "2026-07-01",
-        "has_price": true
-      },
-      {
-        "room": "06.13.2",
-        "floorplan": "Twin Studio Bronze",
-        "floor": "6",
-        "terms": {
-          "全年": 499,
-          "学期": 519,
-          "短学期": 549
-        },
-        "available_date": "2026-07-01",
-        "has_price": true
-      },
-      {
-        "room": "05.02",
-        "floorplan": "Private Studio Silver",
-        "floor": "5",
-        "terms": {
-          "全年": 779
         },
         "available_date": "2026-07-01",
         "has_price": true
@@ -1002,18 +968,6 @@
         "has_price": true
       },
       {
-        "room": "20.01.4",
-        "floorplan": "7 Bed Apartment Silver",
-        "floor": "20",
-        "terms": {
-          "全年": 439,
-          "学期": 459,
-          "短学期": 489
-        },
-        "available_date": "2026-07-01",
-        "has_price": true
-      },
-      {
         "room": "19.02B",
         "floorplan": "Twin Studio",
         "floor": "19",
@@ -1071,6 +1025,30 @@
           "短学期": 509
         },
         "available_date": "2026-07-28",
+        "has_price": true
+      },
+      {
+        "room": "15.01.5",
+        "floorplan": "7 Bed Apartment Silver",
+        "floor": "15",
+        "terms": {
+          "全年": 439,
+          "学期": 459,
+          "短学期": 489
+        },
+        "available_date": "2026-07-27",
+        "has_price": true
+      },
+      {
+        "room": "09.01.6",
+        "floorplan": "7 Bed Apartment Silver",
+        "floor": "9",
+        "terms": {
+          "全年": 449,
+          "学期": 479,
+          "短学期": 509
+        },
+        "available_date": "2026-07-27",
         "has_price": true
       },
       {
@@ -1277,18 +1255,6 @@
           "短学期": 519
         },
         "available_date": "2026-09-08",
-        "has_price": true
-      },
-      {
-        "room": "15.07",
-        "floorplan": "Private Studio Silver",
-        "floor": "15",
-        "terms": {
-          "全年": 469,
-          "学期": 489,
-          "短学期": 519
-        },
-        "available_date": "2026-07-28",
         "has_price": true
       },
       {
@@ -1940,18 +1906,6 @@
         "has_price": true
       },
       {
-        "room": "10.34",
-        "floorplan": "Private Studio Bronze",
-        "floor": "10",
-        "terms": {
-          "全年": 449,
-          "学期": 469,
-          "短学期": 499
-        },
-        "available_date": "2026-09-12",
-        "has_price": true
-      },
-      {
         "room": "10.09",
         "floorplan": "Private Studio Bronze",
         "floor": "10",
@@ -1961,6 +1915,18 @@
           "短学期": 499
         },
         "available_date": "2026-09-05",
+        "has_price": true
+      },
+      {
+        "room": "10.01.E",
+        "floorplan": "6 Bed Apartment Bronze",
+        "floor": "10",
+        "terms": {
+          "全年": 349,
+          "学期": 369,
+          "短学期": 399
+        },
+        "available_date": "2026-07-26",
         "has_price": true
       },
       {
@@ -2033,18 +1999,6 @@
           "短学期": 399
         },
         "available_date": "2026-07-26",
-        "has_price": true
-      },
-      {
-        "room": "09.01.D",
-        "floorplan": "6 Bed Apartment Bronze",
-        "floor": "9",
-        "terms": {
-          "全年": 349,
-          "学期": 369,
-          "短学期": 399
-        },
-        "available_date": "2026-07-01",
         "has_price": true
       },
       {
@@ -3272,18 +3226,6 @@
         "has_price": true
       },
       {
-        "room": "01.11",
-        "floorplan": "Private Studio Bronze",
-        "floor": "1",
-        "terms": {
-          "全年": 449,
-          "学期": 469,
-          "短学期": 499
-        },
-        "available_date": "2026-07-30",
-        "has_price": true
-      },
-      {
         "room": "01.02.F",
         "floorplan": "6 Bed Apartment Bronze",
         "floor": "1",
@@ -3425,6 +3367,18 @@
           "全年": 309,
           "学期": 329,
           "短学期": 359
+        },
+        "available_date": "2026-07-01",
+        "has_price": true
+      },
+      {
+        "room": "15.16",
+        "floorplan": "Cluster Ensuite Silver",
+        "floor": "15",
+        "terms": {
+          "全年": 369,
+          "学期": 389,
+          "短学期": 419
         },
         "available_date": "2026-07-01",
         "has_price": true
@@ -4547,18 +4501,6 @@
       },
       {
         "room": "06.20.5",
-        "floorplan": "Cluster Standard Bronze",
-        "floor": "6",
-        "terms": {
-          "全年": 309,
-          "学期": 329,
-          "短学期": 359
-        },
-        "available_date": "2026-07-01",
-        "has_price": true
-      },
-      {
-        "room": "06.20.4",
         "floorplan": "Cluster Standard Bronze",
         "floor": "6",
         "terms": {
@@ -7757,18 +7699,6 @@
           "全年": 349,
           "学期": 379,
           "短学期": 409
-        },
-        "available_date": "2026-07-01",
-        "has_price": true
-      },
-      {
-        "room": "01.20",
-        "floorplan": "Private Studio Silver",
-        "floor": "1",
-        "terms": {
-          "全年": 449,
-          "学期": 469,
-          "短学期": 499
         },
         "available_date": "2026-07-01",
         "has_price": true
