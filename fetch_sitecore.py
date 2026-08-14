@@ -203,8 +203,10 @@ def main():
             total += len(rooms)
         except Exception as e:
             print(f"  ❌ {e}")
+    import datetime
+    sydney = datetime.datetime.utcnow() + datetime.timedelta(hours=10)
     with open("accolade_sitecore.json", "w", encoding="utf-8") as f:
-        json.dump({"fetched_at": time.strftime("%Y-%m-%d %H:%M:%S"), "properties": result},
+        json.dump({"fetched_at": sydney.strftime("%Y-%m-%d %H:%M:%S"), "properties": result},
                   f, ensure_ascii=False, indent=2)
     print(f"\n✅ 完成！共 {total} 个房间")
 
