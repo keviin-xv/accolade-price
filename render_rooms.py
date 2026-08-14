@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""Accolade 房间级查房页面渲染（城市→公寓→房型→具体房间表格）"""
+"""Accolade 房间级查房页面渲染（城市→公寓→分组→户型→房间）"""
 import json
 
 CSS = """
@@ -34,26 +34,6 @@ body { max-width: 1180px; margin: 0 auto; padding: 32px 20px 60px; line-height: 
 .prop-btn:hover { color: var(--text); border-color: var(--text-muted); }
 .prop-btn.active { background: var(--text); color: var(--bg); border-color: var(--text); }
 .prop-btn .count { font-size: 0.66rem; opacity: 0.5; margin-left: 3px; font-weight: 400; }
-.group-title { display: flex; align-items: center; gap: 8px; margin: 16px 0 8px; font-size: 0.9rem; font-weight: 700; }
-.group-title::after { content: ''; flex: 1; height: 1px; background: var(--border); }
-.group-title .gcount { font-size: 0.7rem; color: var(--text-muted); font-weight: 500; }
-.table-wrap { background: var(--card-bg); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; }
-.table-wrap table { width: 100%; border-collapse: collapse; font-size: 0.82rem; }
-.table-wrap th { text-align: left; padding: 12px 12px; font-weight: 600; font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-muted); background: var(--bg); border-bottom: 1px solid var(--border); white-space: nowrap; }
-.table-wrap td { padding: 13px 12px; border-bottom: 1px solid var(--border); font-variant-numeric: tabular-nums; white-space: nowrap; }
-.table-wrap tr:last-child td { border-bottom: none; }
-.table-wrap tbody tr { transition: background 200ms cubic-bezier(0.32,0.72,0,1); }
-.table-wrap tbody tr:hover { background: var(--bg); }
-.row-ok { box-shadow: inset 3px 0 0 var(--green); }
-.row-bad { box-shadow: inset 3px 0 0 var(--red); }
-.tag { display: inline-flex; align-items: center; gap: 5px; padding: 3px 10px; border-radius: 99px; font-size: 0.75rem; font-weight: 650; }
-.tag::before { content: ''; width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0; }
-.tag-ok { background: var(--green-bg); color: var(--green); }
-.tag-ok::before { background: var(--green); }
-.tag-bad { background: var(--red-bg); color: var(--red); }
-.tag-bad::before { background: var(--red); }
-.price { font-weight: 600; }
-.room-no { font-weight: 700; font-size: 0.9rem; }
 .group-tabs { display: flex; gap: 6px; margin-bottom: 14px; }
 .group-tab { padding: 9px 22px; border-radius: 8px; cursor: pointer; font-size: 0.85rem; font-weight: 700; color: var(--text-muted); border: 1px solid var(--border); background: var(--card-bg); font-family: var(--font); transition: all 200ms cubic-bezier(0.32,0.72,0,1); }
 .group-tab:hover { color: var(--text); border-color: var(--text-muted); }
@@ -73,6 +53,24 @@ body { max-width: 1180px; margin: 0 auto; padding: 32px 20px 60px; line-height: 
 .city-group.active { display: block; }
 .prop-panel { display: none; }
 .prop-panel.active { display: block; }
+.table-wrap { background: var(--card-bg); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; }
+.table-wrap table { width: 100%; border-collapse: collapse; font-size: 0.82rem; }
+.table-wrap th { text-align: left; padding: 12px 12px; font-weight: 600; font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-muted); background: var(--bg); border-bottom: 1px solid var(--border); white-space: nowrap; }
+.table-wrap td { padding: 13px 12px; border-bottom: 1px solid var(--border); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.table-wrap tr:last-child td { border-bottom: none; }
+.table-wrap tbody tr { transition: background 200ms cubic-bezier(0.32,0.72,0,1); }
+.table-wrap tbody tr:hover { background: var(--bg); }
+.row-ok { box-shadow: inset 3px 0 0 var(--green); }
+.row-bad { box-shadow: inset 3px 0 0 var(--red); }
+.tag { display: inline-flex; align-items: center; gap: 5px; padding: 3px 10px; border-radius: 99px; font-size: 0.75rem; font-weight: 650; }
+.tag::before { content: ''; width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0; }
+.tag-ok { background: var(--green-bg); color: var(--green); }
+.tag-ok::before { background: var(--green); }
+.tag-bad { background: var(--red-bg); color: var(--red); }
+.tag-bad::before { background: var(--red); }
+.price { font-weight: 600; }
+.room-no { font-weight: 700; font-size: 0.9rem; }
+.room-link:hover { opacity: 0.7; }
 .footer { margin-top: 40px; padding-top: 24px; border-top: 1px solid var(--border); }
 .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px,1fr)); gap: 14px; margin-bottom: 24px; }
 .footer-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: var(--radius); padding: 16px 18px; }
@@ -94,6 +92,22 @@ body { max-width: 1180px; margin: 0 auto; padding: 32px 20px 60px; line-height: 
 
 TERM_LABELS = ["全年", "学期", "短学期"]
 
+PROP_PAGES = {
+    "On Gibbons": "https://www.accolade-student.com/en/locations/sydney/on-gibbons",
+    "On Regent": "https://www.accolade-student.com/en/locations/sydney/on-regent",
+    "On A'Beckett": "https://www.accolade-student.com/en/locations/melbourne/on-abeckett",
+    "On Gray": "https://www.accolade-student.com/en/locations/adelaide/on-gray",
+    "On Waymouth": "https://www.accolade-student.com/en/locations/adelaide/on-waymouth",
+    "On Moore": "https://www.accolade-student.com/en/locations/canberra/on-moore",
+}
+
+CITY_MAP = {
+    "On Gibbons": "悉尼 Sydney", "On Regent": "悉尼 Sydney",
+    "On A'Beckett": "墨尔本 Melbourne",
+    "On Gray": "阿德莱德 Adelaide", "On Waymouth": "阿德莱德 Adelaide",
+    "On Moore": "堪培拉 Canberra",
+}
+
 
 def esc(s):
     return (str(s).replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;").replace('"', "&quot;"))
@@ -106,15 +120,11 @@ def term_cell(label, room):
     return f'<td><span class="price">${price:,}</span></td>'
 
 
-# 公寓 → 官网页面（房间链接目标）
-PROP_PAGES = {
-    "On Gibbons": "https://www.accolade-student.com/en/locations/sydney/on-gibbons",
-    "On Regent": "https://www.accolade-student.com/en/locations/sydney/on-regent",
-    "On A'Beckett": "https://www.accolade-student.com/en/locations/melbourne/on-abeckett",
-    "On Gray": "https://www.accolade-student.com/en/locations/adelaide/on-gray",
-    "On Waymouth": "https://www.accolade-student.com/en/locations/adelaide/on-waymouth",
-    "On Moore": "https://www.accolade-student.com/en/locations/canberra/on-moore",
-}
+def classify_type(name):
+    n = name.lower()
+    if "studio" in n and "twin" not in n:
+        return "studio"
+    return "share"
 
 
 def render_room_table(rooms, prop_name=""):
@@ -126,9 +136,8 @@ def render_room_table(rooms, prop_name=""):
         label = "可订" if ok else "售罄"
         floor = esc(f"{r.get('floor')}层") if r.get("floor") else "—"
         terms = "".join(term_cell(t, r) for t in TERM_LABELS)
-        # 房间号超链接（带 ↗ 提示，新窗口打开）
-        room_html = (f'<a href="{prop_url}" target="_blank" '
-                     f'style="color:inherit;text-decoration:none;" class="room-link">'
+        room_html = (f'<a href="{prop_url}" target="_blank" class="room-link" '
+                     f'style="color:inherit;text-decoration:none;">'
                      f'<span class="room-no">{esc(r["room"])}</span> '
                      f'<span style="font-size:0.7rem;opacity:0.45;">↗</span></a>'
                      if prop_url else f'<span class="room-no">{esc(r["room"])}</span>')
@@ -149,39 +158,11 @@ def render_room_table(rooms, prop_name=""):
     return f'<div class="table-wrap"><table>{head}<tbody>{rows}</tbody></table></div>'
 
 
-def classify_type(name):
-    """房型分类：Studio（不含 Twin）→ studio 组；Twin/Ensuite/Share → 合租组"""
-    n = name.lower()
-    if "studio" in n and "twin" not in n:
-        return "studio"
-    return "share"
-
-
-def render_type_tabs(pi, group, types, offset):
-    """生成一组户型 Tab + 面板（offset 保证全局唯一索引）"""
-    tabs = ""
-    panels = ""
-    for j, ft in enumerate(types):
-        ti = offset + j
-        rs = group[ft]
-        avail = sum(1 for r in rs if r["has_price"])
-        tact = " active" if ti == offset else ""
-        tabs += (f'<button class="type-tab{tact}" id="type-btn-{pi}-{ti}" onclick="switchType({pi},{ti})">'
-                 f'{esc(ft)}<span class="count">{avail}/{len(rs)}</span></button>')
-        panels += (f'<div class="type-panel{tact}" id="type-panel-{pi}-{ti}">'
-                   f'{render_room_table(rs)}</div>')
-    if not tabs:
-        return ""
-    return f'<div class="type-tabs">{tabs}</div>{panels}'
-
-
 def render_property(ci, pi, prop_name, rooms):
-    """公寓内：分组 Tab（Studio/合租）→ 组内户型 Tab → 房间表格"""
     by_type = {}
     for r in rooms:
         by_type.setdefault(r["floorplan"], []).append(r)
 
-    # 分组
     groups = []
     studios = {k: v for k, v in by_type.items() if classify_type(k) == "studio"}
     shares = {k: v for k, v in by_type.items() if classify_type(k) == "share"}
@@ -189,7 +170,6 @@ def render_property(ci, pi, prop_name, rooms):
         groups.append(("studio", "🏠 Studio", studios))
     if shares:
         groups.append(("share", "👥 合租", shares))
-
     if not groups:
         return '<div style="padding:24px;color:var(--text-muted);">暂无房间数据</div>'
 
@@ -201,7 +181,6 @@ def render_property(ci, pi, prop_name, rooms):
         group_tabs += (f'<button class="group-tab{gact}" id="group-btn-{ci}-{pi}-{gi}" '
                        f'onclick="switchGroup({ci},{pi},{gi})">{glabel}<span class="count">{total}间</span></button>')
 
-        # 组内户型 Tab
         type_tabs = ""
         type_panels = ""
         for ti, ft in enumerate(sorted(gtypes.keys())):
@@ -220,16 +199,7 @@ def render_property(ci, pi, prop_name, rooms):
     return f'<div class="group-tabs">{group_tabs}</div>{group_panels}'
 
 
-CITY_MAP = {
-    "On Gibbons": "悉尼 Sydney", "On Regent": "悉尼 Sydney",
-    "On A'Beckett": "墨尔本 Melbourne",
-    "On Gray": "阿德莱德 Adelaide", "On Waymouth": "阿德莱德 Adelaide",
-    "On Moore": "堪培拉 Canberra",
-}
-
-
 def main():
-    # 优先用 Sitecore 全城市数据，回退 3destate 数据
     try:
         with open("accolade_sitecore.json", encoding="utf-8") as f:
             data = json.load(f)
@@ -239,7 +209,6 @@ def main():
     fetched = data.get("fetched_at", "")
     properties = data.get("properties", {})
 
-    # 按城市分组
     cities = {}
     for pname in properties.keys():
         city = CITY_MAP.get(pname, "悉尼 Sydney")
@@ -277,7 +246,7 @@ def main():
 <body>
 <div class="header fade-in">
   <div class="header-top"><h1>Accolade 房态查房</h1></div>
-  <p class="meta">📍 悉尼 · 墨尔本 · 阿德莱德 · 堪培拉 &ensp;|&ensp; 更新于 {fetched} &ensp;|&ensp; 优惠信息请查看「供应商信息同步群」</p>
+  <p class="meta">📍 悉尼 · 墨尔本 · 阿德莱德 · 堪培拉 &ensp;|&ensp; 更新于 {fetched}（北京时间）&ensp;|&ensp; 优惠信息请查看「供应商信息同步群」</p>
   <p class="meta" style="margin-top:4px;">⚠️ 此页面仅供一键查房参考，实际信息以官网显示为准</p>
 </div>
 <nav class="city-nav fade-in">{city_nav}</nav>
@@ -333,3 +302,7 @@ function switchType(ci,pi,gi,ti){{
     with open("rooms.html", "w", encoding="utf-8") as f:
         f.write(html)
     print(f"✅ 已生成 rooms.html（更新于 {fetched}）")
+
+
+if __name__ == "__main__":
+    main()
