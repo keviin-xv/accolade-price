@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-17 09:36:20",
+  "fetched_at": "2026-08-17 10:47:18",
   "properties": {
     "On Gibbons": [
       {
@@ -5642,9 +5642,7 @@
         "floorplan": "Cluster Ensuite Silver",
         "floor": "1",
         "terms": {
-          "全年": 369,
-          "学期": 389,
-          "短学期": 419
+          "全年": 419
         },
         "available_date": "2026-07-01",
         "has_price": true
@@ -6163,7 +6161,7 @@
           "全年": 499,
           "学期": 529
         },
-        "available_date": "2026-09-08",
+        "available_date": "2026-07-22",
         "has_price": true
       },
       {
@@ -6187,7 +6185,7 @@
           "学期": 449,
           "短学期": 479
         },
-        "available_date": "2026-09-11",
+        "available_date": "2026-07-27",
         "has_price": true
       },
       {
@@ -6235,7 +6233,7 @@
           "学期": 449,
           "短学期": 479
         },
-        "available_date": "2026-09-08",
+        "available_date": "2026-07-14",
         "has_price": true
       },
       {
