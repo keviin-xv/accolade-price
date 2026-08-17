@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-17 10:47:18",
+  "fetched_at": "2026-08-17 11:53:00",
   "properties": {
     "On Gibbons": [
       {
@@ -400,9 +400,8 @@
         "floorplan": "Cluster Ensuite Twin Bronze",
         "floor": "2",
         "terms": {
-          "全年": 619,
-          "学期": 749,
-          "短学期": 769
+          "全年": 749,
+          "学期": 769
         },
         "available_date": "2026-07-01",
         "has_price": true
@@ -489,18 +488,6 @@
           "全年": 599,
           "学期": 619,
           "短学期": 649
-        },
-        "available_date": "2026-07-01",
-        "has_price": true
-      },
-      {
-        "room": "14.22",
-        "floorplan": "Private Studio Silver",
-        "floor": "14",
-        "terms": {
-          "全年": 795,
-          "学期": 815,
-          "短学期": 835
         },
         "available_date": "2026-07-01",
         "has_price": true
@@ -1650,18 +1637,6 @@
           "短学期": 519
         },
         "available_date": "2026-09-11",
-        "has_price": true
-      },
-      {
-        "room": "11.14",
-        "floorplan": "Private Studio Silver",
-        "floor": "11",
-        "terms": {
-          "全年": 469,
-          "学期": 489,
-          "短学期": 519
-        },
-        "available_date": "2026-07-01",
         "has_price": true
       },
       {
