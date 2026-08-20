@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-20 09:32:07",
+  "fetched_at": "2026-08-20 11:49:40",
   "properties": {
     "On Gibbons": [
       {
@@ -36,18 +36,6 @@
           "短学期": 835
         },
         "available_date": "2026-07-09",
-        "has_price": true
-      },
-      {
-        "room": "15.02",
-        "floorplan": "Private Studio Silver",
-        "floor": "15",
-        "terms": {
-          "全年": 815,
-          "学期": 835,
-          "短学期": 864
-        },
-        "available_date": "2026-04-28",
         "has_price": true
       },
       {
@@ -457,18 +445,6 @@
         "has_price": true
       },
       {
-        "room": "14.23",
-        "floorplan": "Private Studio Gold",
-        "floor": "14",
-        "terms": {
-          "全年": 849,
-          "学期": 869,
-          "短学期": 899
-        },
-        "available_date": "2026-04-28",
-        "has_price": true
-      },
-      {
         "room": "14.13.1",
         "floorplan": "Twin Studio Bronze",
         "floor": "14",
@@ -476,18 +452,6 @@
           "全年": 499,
           "学期": 519,
           "短学期": 549
-        },
-        "available_date": "2026-04-28",
-        "has_price": true
-      },
-      {
-        "room": "14.01",
-        "floorplan": "Private Studio Silver",
-        "floor": "14",
-        "terms": {
-          "全年": 795,
-          "学期": 815,
-          "短学期": 835
         },
         "available_date": "2026-04-28",
         "has_price": true
@@ -3001,30 +2965,6 @@
       }
     ],
     "On Waymouth": [
-      {
-        "room": "16.20.8",
-        "floorplan": "Cluster Standard Bronze",
-        "floor": "16",
-        "terms": {
-          "全年": 309,
-          "学期": 329,
-          "短学期": 359
-        },
-        "available_date": "2026-04-28",
-        "has_price": true
-      },
-      {
-        "room": "16.20.7",
-        "floorplan": "Cluster Standard Bronze",
-        "floor": "16",
-        "terms": {
-          "全年": 309,
-          "学期": 329,
-          "短学期": 359
-        },
-        "available_date": "2026-04-28",
-        "has_price": true
-      },
       {
         "room": "16.20.3",
         "floorplan": "Cluster Standard Bronze",
