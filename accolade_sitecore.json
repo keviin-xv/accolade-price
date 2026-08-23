@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-23 11:52:54",
+  "fetched_at": "2026-08-23 15:23:41",
   "properties": {
     "On Gibbons": [
       {
@@ -6368,18 +6368,6 @@
           "全年": 529
         },
         "available_date": "2026-06-30",
-        "has_price": true
-      },
-      {
-        "room": "05.01",
-        "floorplan": "Private Studio Silver",
-        "floor": "5",
-        "terms": {
-          "全年": 479,
-          "学期": 499,
-          "短学期": 519
-        },
-        "available_date": "2026-07-21",
         "has_price": true
       },
       {
