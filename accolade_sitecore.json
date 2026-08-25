@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-25 09:27:44",
+  "fetched_at": "2026-08-25 11:51:12",
   "properties": {
     "On Gibbons": [
       {
@@ -656,18 +656,6 @@
       }
     ],
     "On A'Beckett": [
-      {
-        "room": "39.01.5",
-        "floorplan": "7 Bed Apartment Silver",
-        "floor": "39",
-        "terms": {
-          "全年": 439,
-          "学期": 459,
-          "短学期": 489
-        },
-        "available_date": "2026-08-22",
-        "has_price": true
-      },
       {
         "room": "37.02A",
         "floorplan": "Twin Studio Bronze",
@@ -4665,18 +4653,6 @@
         "has_price": true
       },
       {
-        "room": "04.13",
-        "floorplan": "Cluster Ensuite Silver",
-        "floor": "4",
-        "terms": {
-          "全年": 369,
-          "学期": 389,
-          "短学期": 419
-        },
-        "available_date": "2026-04-28",
-        "has_price": true
-      },
-      {
         "room": "04.11",
         "floorplan": "Private Studio Silver",
         "floor": "4",
@@ -6167,18 +6143,6 @@
         "has_price": true
       },
       {
-        "room": "07.14",
-        "floorplan": "Private Studio Silver",
-        "floor": "7",
-        "terms": {
-          "全年": 469,
-          "学期": 479,
-          "短学期": 519
-        },
-        "available_date": "2026-07-21",
-        "has_price": true
-      },
-      {
         "room": "07.10",
         "floorplan": "Private Studio Silver",
         "floor": "7",
@@ -6356,18 +6320,6 @@
           "短学期": 449
         },
         "available_date": "2026-07-14",
-        "has_price": true
-      },
-      {
-        "room": "05.41",
-        "floorplan": "Cluster Ensuite Silver",
-        "floor": "5",
-        "terms": {
-          "全年": 429,
-          "学期": 439,
-          "短学期": 449
-        },
-        "available_date": "2026-07-27",
         "has_price": true
       },
       {
@@ -6618,18 +6570,6 @@
           "短学期": 359
         },
         "available_date": "2026-04-28",
-        "has_price": true
-      },
-      {
-        "room": "03.44",
-        "floorplan": "Cluster Ensuite Silver",
-        "floor": "3",
-        "terms": {
-          "全年": 439,
-          "学期": 449,
-          "短学期": 479
-        },
-        "available_date": "2026-07-07",
         "has_price": true
       },
       {
