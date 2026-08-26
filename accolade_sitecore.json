@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-25 15:34:08",
+  "fetched_at": "2026-08-26 09:38:00",
   "properties": {
     "On Gibbons": [
       {
@@ -35,17 +35,6 @@
           "学期": 835
         },
         "available_date": "2026-07-08",
-        "has_price": true
-      },
-      {
-        "room": "15.02",
-        "floorplan": "Private Studio Silver",
-        "floor": "15",
-        "terms": {
-          "全年": 815,
-          "学期": 835
-        },
-        "available_date": "2026-04-28",
         "has_price": true
       },
       {
@@ -179,7 +168,7 @@
         "has_price": true
       },
       {
-        "room": "03.22.1",
+        "room": "03.22",
         "floorplan": "Cluster Ensuite Silver",
         "floor": "3",
         "terms": {
@@ -191,7 +180,7 @@
         "has_price": true
       },
       {
-        "room": "03.20.1",
+        "room": "03.20",
         "floorplan": "Cluster Ensuite Silver",
         "floor": "3",
         "terms": {
@@ -263,7 +252,7 @@
         "has_price": true
       },
       {
-        "room": "02.23.1",
+        "room": "02.23",
         "floorplan": "Cluster Ensuite Silver",
         "floor": "2",
         "terms": {
@@ -275,7 +264,7 @@
         "has_price": true
       },
       {
-        "room": "02.20.1",
+        "room": "02.20",
         "floorplan": "Cluster Ensuite Silver",
         "floor": "2",
         "terms": {
@@ -323,7 +312,7 @@
         "has_price": true
       },
       {
-        "room": "02.12.1",
+        "room": "02.12",
         "floorplan": "Cluster Ensuite Silver",
         "floor": "2",
         "terms": {
@@ -335,7 +324,7 @@
         "has_price": true
       },
       {
-        "room": "02.10.1",
+        "room": "02.10",
         "floorplan": "Cluster Ensuite Silver",
         "floor": "2",
         "terms": {
@@ -347,7 +336,7 @@
         "has_price": true
       },
       {
-        "room": "02.09.1",
+        "room": "02.09",
         "floorplan": "Cluster Ensuite Silver",
         "floor": "2",
         "terms": {
@@ -359,7 +348,7 @@
         "has_price": true
       },
       {
-        "room": "02.08.1",
+        "room": "02.08",
         "floorplan": "Cluster Ensuite Silver",
         "floor": "2",
         "terms": {
@@ -371,7 +360,7 @@
         "has_price": true
       },
       {
-        "room": "02.06.1",
+        "room": "02.06",
         "floorplan": "Cluster Ensuite Silver",
         "floor": "2",
         "terms": {
@@ -444,16 +433,6 @@
       }
     ],
     "On Regent": [
-      {
-        "room": "17.22",
-        "floorplan": "Private Studio Silver",
-        "floor": "17",
-        "terms": {
-          "全年": 835
-        },
-        "available_date": "2026-09-06",
-        "has_price": true
-      },
       {
         "room": "17.13.2",
         "floorplan": "Twin Studio Bronze",
@@ -825,37 +804,13 @@
         "has_price": true
       },
       {
-        "room": "09.01.5",
+        "room": "09.01.6",
         "floorplan": "7 Bed Apartment Silver",
         "floor": "9",
         "terms": {
-          "全年": 439,
-          "学期": 459,
-          "短学期": 489
-        },
-        "available_date": "2026-07-27",
-        "has_price": true
-      },
-      {
-        "room": "07.01.4",
-        "floorplan": "7 Bed Apartment Silver",
-        "floor": "7",
-        "terms": {
-          "全年": 439,
-          "学期": 459,
-          "短学期": 489
-        },
-        "available_date": "2026-04-28",
-        "has_price": true
-      },
-      {
-        "room": "06.01.5",
-        "floorplan": "7 Bed Apartment Silver",
-        "floor": "6",
-        "terms": {
-          "全年": 439,
-          "学期": 459,
-          "短学期": 489
+          "全年": 449,
+          "学期": 479,
+          "短学期": 509
         },
         "available_date": "2026-07-27",
         "has_price": true
@@ -3330,18 +3285,6 @@
           "短学期": 539
         },
         "available_date": "2026-07-24",
-        "has_price": true
-      },
-      {
-        "room": "10.20.7",
-        "floorplan": "Cluster Standard Bronze",
-        "floor": "10",
-        "terms": {
-          "全年": 309,
-          "学期": 329,
-          "短学期": 359
-        },
-        "available_date": "2026-04-28",
         "has_price": true
       },
       {
@@ -6681,7 +6624,7 @@
         "has_price": true
       },
       {
-        "room": "2.45.1",
+        "room": "2.45",
         "floorplan": "Cluster Ensuite Silver",
         "floor": "2",
         "terms": {
@@ -6726,18 +6669,6 @@
           "短学期": 419
         },
         "available_date": "2026-04-28",
-        "has_price": true
-      },
-      {
-        "room": "02.39",
-        "floorplan": "Cluster Ensuite Silver",
-        "floor": "2",
-        "terms": {
-          "全年": 369,
-          "学期": 389,
-          "短学期": 419
-        },
-        "available_date": "2026-08-15",
         "has_price": true
       },
       {
@@ -6969,7 +6900,7 @@
         "has_price": true
       },
       {
-        "room": "1.30.1",
+        "room": "1.30",
         "floorplan": "Cluster Ensuite Silver",
         "floor": "1",
         "terms": {
