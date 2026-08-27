@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-27 21:56:12",
+  "fetched_at": "2026-08-28 01:56:58",
   "properties": {
     "On Gibbons": [
       {
@@ -739,18 +739,6 @@
           "短学期": 449
         },
         "available_date": "2026-07-11",
-        "has_price": true
-      },
-      {
-        "room": "06.01.5",
-        "floorplan": "7 Bed Apartment Silver",
-        "floor": "6",
-        "terms": {
-          "全年": 439,
-          "学期": 459,
-          "短学期": 489
-        },
-        "available_date": "2026-07-27",
         "has_price": true
       }
     ],
