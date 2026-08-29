@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-29 03:07:00",
+  "fetched_at": "2026-08-29 14:28:54",
   "properties": {
     "On Gibbons": [
       {
@@ -22,6 +22,16 @@
           "全年": 569,
           "学期": 599,
           "短学期": 619
+        },
+        "available_date": "2026-07-24",
+        "has_price": true
+      },
+      {
+        "room": "14.25",
+        "floorplan": "Private Studio Bronze",
+        "floor": "14",
+        "terms": {
+          "全年": 835
         },
         "available_date": "2026-07-24",
         "has_price": true
@@ -372,18 +382,6 @@
           "全年": 569,
           "学期": 599,
           "短学期": 619
-        },
-        "available_date": "2026-04-28",
-        "has_price": true
-      },
-      {
-        "room": "14.01",
-        "floorplan": "Private Studio Silver",
-        "floor": "14",
-        "terms": {
-          "全年": 795,
-          "学期": 815,
-          "短学期": 835
         },
         "available_date": "2026-04-28",
         "has_price": true
@@ -1952,6 +1950,16 @@
           "全年": 349,
           "学期": 369,
           "短学期": 399
+        },
+        "available_date": "2026-04-28",
+        "has_price": true
+      },
+      {
+        "room": "04.24",
+        "floorplan": "Private Studio Bronze",
+        "floor": "4",
+        "terms": {
+          "全年": 499
         },
         "available_date": "2026-04-28",
         "has_price": true
